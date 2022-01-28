@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1 class="title">Stuffs I need to do</h1>
+    <div class="allList">
+        <h2>My Lists</h2>
+        <ul class="listName" data-lists></ul>
+
+        <form action="" data-new-list-form>
+            <input 
+                type="text"
+                class="new list"
+                data-new-list-input
+                placeholder="Add New List"
+                aria-label="Add New List"
+            />
+            <button class="btn create" aria-label="create new list">+</button>
+        </form>
+    </div>
+
+    <div class="todoList" data-list-display-container>
+        <div class="listHeader">
+            <h2 class="listTitle" data-list-title></h2>
+            <p class="taskRemaining" data-list-count></p>
+        </div>
+        
+        <div class="listBody">
+            <div class="tasks" data-tasks></div>
+            <div class="newTaskCreator">
+                <form action="" data-new-task-form>
+                    <input 
+                        type="text"
+                        class="new addTask"
+                        data-new-task-input
+                        placeholder="Add New Task"
+                        aria-label="Add New Task"
+                    />
+                    <button class="btn create" aria-label="create new list">+</button>
+                </form>
+            </div>
+            <div class="deleteBtns">
+                <button class="btn clear" data-clear-completed-task-button>Clear Completed Tasks</button>
+                <button class="btn clear" data-delete-list-button>Delete List</button>
+            </div>
+        </div>
+    </div>
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox"/>
+            <label>
+                <span class="customCheckbox"></span>
+            </label>
+        </div>
+    </template>
+</body>
+</html>
