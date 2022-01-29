@@ -54,6 +54,9 @@ form {
     padding: 0.5rem;
     order: 2;
 }
+.new.list {
+    color: white;
+}
 .new::placeholder {
     color: white;
 }
